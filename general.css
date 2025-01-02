@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/****variable****/
+/** farver **/
+:root {
+  --blue: #9accce;
+  --yellow: #f3bd06;
+  --beige: #efe3cc;
+  --orange: #fe6301;
+  --pink: #ec968e;
+  --black: #050000;
+}
+
+/*** header og menu ***/
+header {
+  background-color: var(--pink);
+  justify-content: space-between;
+}
+/**** burger menu ****/
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 1100;
+}
+
+.burger-menu span {
+  display: block;
+  height: 3px;
+  background-color: var(--blue);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.burger-menu:hover span {
+  background-color: var(--yellow);
+}
+
+#menuList2 {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky; /* Gør menuen positioneret i hele vinduet */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Fuld bredde */
+  height: 100vh; /* Fuld højde */
+  background-color: var(--pink);
+  z-index: 1000;
+  gap: 20px; /* Mellemrum mellem elementer */
+  text-decoration: none;
+  color: var(--blue);
+}
+
+#menuList2.active {
+  display: flex;
+}
+
+#menuList2 li {
+  text-align: center;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: var(--blue);
+  font-size: 125%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header ul li a:hover {
+  color: var(--yellow);
+}
+
+/** body **/
+body {
+  background-color: var(--beige);
+}
+/** forside billede menu **/
+.forside_menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  grid-template-rows: auto auto auto;
+  margin-bottom: 5rem;
+}
+
+.forside_menu img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/*** high lights sektion ***/
+.video {
+  position: relative;
+  width: 100%;
+  max-height: 30vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  margin-bottom: 15vh;
+}
+
+.high_lights {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: var(--orange);
+  width: 90vw;
+  height: 30vh;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**** ****/
+.sektion_z {
+  padding: 6vw;
+}
+
+.billede_v {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 0;
+}
+
+.tekst_h {
+  margin-right: 0;
+}
+
+.billede_h {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 0;
+  margin-bottom: 5rem;
+}
+
+.tekst_v {
+  padding-top: 0;
+  margin-right: 0;
+}
+
+/*******Footer******/
+footer {
+  background-color: var(--blue);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.logos {
+  display: flex;
+  cursor: pointer;
+  padding-bottom: 2rem;
+  position: static;
+  top: 0;
+  left: 0;
+  width: 214px;
+  height: auto;
+  gap: 1rem;
+}
+
+.logos a:hover {
+  filter: brightness(7);
+  transition: transform 0.3s ease;
+}
+
+.find_os {
+  padding: 2rem;
+}
+
+.footer_tekst {
+  padding-left: 2rem;
+  padding-bottom: 12rem;
+}
+
+/******  Desktop  *******/
+@media (min-width: 800px) {
+  /**** burger menu ****/
+  .burger-menu {
+    display: none;
+    position: absolute;
+  }
+
+  /*** header ***/
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+  }
+
+  #menuList1 {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+  }
+
+  /*** high light sektion ***/
+  .high_lights {
+    top: 55%;
+  }
+
+  /*****************/
+  .forside_menu {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
