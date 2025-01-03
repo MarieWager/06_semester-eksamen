@@ -20,6 +20,39 @@ img {
   --black: #050000;
 }
 
+/****  FONTS  ****/
+h1 {
+  font-family: "Braah One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--yellow);
+  font-size: 300%;
+}
+h2 {
+  font-family: "Darumadrop One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--blue);
+  font-size: 200%;
+}
+h3 {
+  font-family: "Chango", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h4 {
+  font-family: "Sulphur Point", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--orange);
+}
+p {
+  font-family: "Sulphur Point", serif;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--black);
+}
+
 /*** header og menu ***/
 header {
   background-color: var(--pink);
@@ -60,11 +93,12 @@ header {
   top: 0;
   left: 0;
   width: 100vw; /* Fuld bredde */
-  height: 100vh; /* Fuld højde */
+  height: 100vw; /* Fuld højde */
   background-color: var(--pink);
   z-index: 1000;
   gap: 20px; /* Mellemrum mellem elementer */
   text-decoration: none;
+  list-style: none;
   color: var(--blue);
 }
 
@@ -90,6 +124,12 @@ header ul li a:hover {
 body {
   background-color: var(--beige);
 }
+
+.forside_sektion {
+  padding-top: 2rem;
+  text-align: center;
+}
+
 /** forside billede menu **/
 .forside_menu {
   display: grid;
@@ -108,6 +148,12 @@ body {
 }
 
 /*** high lights sektion ***/
+.h-l_sektion {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
 .video {
   position: relative;
   width: 100%;
@@ -115,25 +161,27 @@ body {
   top: 0;
   left: 0;
   object-fit: cover;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 
 .high_lights {
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
   background-color: var(--orange);
   width: 90vw;
-  height: 30vh;
+  height: 25vh;
   border-radius: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 7vw;
+  color: var(--beige);
 }
 
-/**** ****/
+/**** zigzag sektion ****/
 .sektion_z {
   padding: 6vw;
 }
@@ -160,11 +208,39 @@ body {
   margin-right: 0;
 }
 
+/** knap **/
+.grid_knap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  margin: 0 auto;
+  padding-top: 0;
+}
+.knap {
+  font-family: "Sulphur Point", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--beige);
+  background-color: var(--yellow);
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3rem;
+}
+/***hover***/
+.knap:hover {
+  background-color: var(--pink);
+  color: var(--beige);
+  transition: color 1s ease-in;
+}
+
 /*******Footer******/
 footer {
   background-color: var(--blue);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 4rem;
 }
 
 .logos {
@@ -220,9 +296,6 @@ footer {
   }
 
   /*** high light sektion ***/
-  .high_lights {
-    top: 55%;
-  }
 
   /*****************/
   .forside_menu {
