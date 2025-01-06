@@ -40,6 +40,19 @@ h3 {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1.3vw;
+  margin-bottom: 1rem;
+}
+.h3_ {
+  font-family: "Chango", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  border-radius: 3rem;
+  background-color: var(--orange);
+  color: var(--beige);
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 h4 {
   font-family: "Sulphur Point", serif;
@@ -64,7 +77,7 @@ header {
   background-color: var(--pink);
   justify-content: space-between;
   font-family: "Braah One", serif;
-  padding: 1rem;
+  padding: 2rem;
   flex-direction: column;
 }
 
@@ -77,21 +90,40 @@ header ul li a:hover {
   color: var(--yellow);
 }
 
-/** logo **/
-header .logo {
+/*** icon ***/
+.icon,
+.icon2 {
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1100;
 }
 
-header .logo img {
-  max-height: 60px;
-  transition: transform 0.3s ease;
+.icon img {
+  position: absolute;
+  width: 4rem;
+  height: auto;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
 }
 
-header .logo img:hover {
-  transform: scale(1.1);
+.icon .base-icon {
+  opacity: 1;
+}
+
+.icon .hover-icon {
+  opacity: 0;
+}
+
+.icon:hover .base-icon {
+  opacity: 0;
+}
+
+.icon:hover .hover-icon {
+  opacity: 1;
 }
 
 /**** burger menu ****/
@@ -103,7 +135,7 @@ header .logo img:hover {
   height: 25px;
   cursor: pointer;
   position: absolute;
-  top: 23px;
+  top: 1.2rem;
   right: 15px;
   z-index: 1100;
   font-family: "Braah One", serif;
@@ -275,28 +307,47 @@ body {
 /**** zigzag sektion ****/
 .sektion_z {
   padding: 6vw;
-}
-
-.billede_v {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-left: 0;
+  gap: 2rem; /* Giver plads mellem billeder og tekst */
 }
 
-.tekst_h {
-  margin-right: 0;
-}
-
+.billede_v,
 .billede_h {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-left: 0;
-  margin-bottom: 5rem;
+  display: block;
+  margin: 0 auto;
+  max-width: 85vw;
 }
 
+.billede_v,
+.billede_h {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  max-width: 85vw;
+}
+
+.tekst_h,
 .tekst_v {
-  padding-top: 0;
-  margin-right: 0;
+  margin: 0 auto;
+  max-width: 85vw;
+  text-align: left;
+  padding-top: 1rem;
+}
+
+/* i mobile skal teksterne står ovenover billederne */
+.tekst_h:last-child {
+  order: -1;
+}
+
+/*** sektion billeder ***/
+.sektion_img {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4rem;
 }
 
 /** knap **/
@@ -326,34 +377,74 @@ body {
   transition: color 1s ease-in;
 }
 
+/** about side**/
+.about_sektion {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.about_tekst {
+  padding: 6vw;
+}
+
 /*******Footer******/
 footer {
   background-color: var(--blue);
+  min-height: 30vw;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.find_os {
+  margin-top: 12vw;
+  margin-left: 1rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
 }
 
 .logos {
-  display: flex;
   cursor: pointer;
   padding-bottom: 2rem;
   gap: 1rem;
-  z-index: 4000;
+  z-index: 1000;
 }
-
 .logos a:hover {
   filter: brightness(7);
   transition: transform 0.3s ease;
 }
 
-.find_os {
-  padding: 2rem;
+.icon2 img {
+  position: absolute;
+  width: 8rem;
+  height: auto;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.icon2 .base-icon {
+  opacity: 1;
+}
+
+.icon2 .hover-icon {
+  opacity: 0;
+}
+
+.icon2:hover .base-icon {
+  opacity: 0;
+}
+
+.icon2:hover .hover-icon {
+  opacity: 1;
 }
 
 .footer_tekst {
-  padding-left: 2rem;
-  padding-bottom: 12rem;
+  display: flex;
+  margin-left: 1rem;
+  align-items: center;
 }
 
 /******  Desktop  *******/
@@ -369,7 +460,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 1rem;
   }
 
   header ul li a {
@@ -386,15 +476,26 @@ footer {
     margin: 0 auto;
   }
 
-  /** menuerne *
-    #menuList2 {
-    display: flex;
-    gap: 20px;
-    position: static;
-    flex-direction: row;
-    background-color: transparent;
-  }*/
+  header ul li a.current-page {
+    color: var(--yellow); /* Samme som hover-farve */
+    border-bottom: 2px solid var(--orange); /* Tilføj evt. en understregning */
+  }
 
+  /*****************/
+  .forside_menu {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /*** high light sektion ***/
+  .video {
+    max-height: 35vh;
+  }
+
+  .high_lights {
+    top: 70%;
+  }
+
+  /** menuerne **/
   #menuList2 {
     display: flex; /* Vis menuen */
     flex-direction: row;
@@ -402,7 +503,7 @@ footer {
     gap: 20px;
     list-style: none;
     position: absolute;
-    top: 23px;
+    padding-top: 1rem;
     right: 0;
     padding-right: 1rem;
     width: auto;
@@ -414,10 +515,41 @@ footer {
     text-align: center;
   }
 
-  /*** high light sektion ***/
+  /** zigzag sektion **/
+  .sektion_z {
+    padding: 6vw;
+  }
 
-  /*****************/
-  .forside_menu {
-    grid-template-columns: repeat(4, 1fr);
+  .billede_v,
+  .billede_h {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+    margin-bottom: 5rem;
+    max-width: 85vw;
+  }
+
+  .tekst_h,
+  .tekst_v {
+    padding-top: 0;
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  /** flytter teksterne til zigzag mønster**/
+  .tekst_h:last-child {
+    order: 1;
+  }
+
+  /*** footer ***/
+  .icon2 img {
+    position: absolute;
+    width: 12rem;
+    height: auto;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
   }
 }
