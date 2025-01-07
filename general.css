@@ -32,7 +32,7 @@ h2 {
   font-family: "Darumadrop One", serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--blue);
+  color: var(--pink);
   font-size: 200%;
 }
 h3 {
@@ -50,8 +50,10 @@ h3 {
   background-color: var(--orange);
   color: var(--beige);
   padding: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-top: 4vw;
+  margin-left: 12vw;
+  margin-right: 12vw;
+  margin-bottom: 10px;
 }
 h4 {
   font-family: "Sulphur Point", serif;
@@ -73,16 +75,17 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: var(--pink);
+  background-color: var(--blue);
+  color: var(--beige);
   justify-content: space-between;
-  font-family: "Braah One", serif;
+  font-family: "Darumadrop One", serif;
   padding: 2rem;
   flex-direction: column;
 }
 
 header ul li a {
   text-decoration: none;
-  color: var(--blue);
+  color: var(--beige);
   font-size: 125%;
 }
 header ul li a:hover {
@@ -144,7 +147,7 @@ header ul li a:hover {
 .burger-menu span {
   display: block;
   height: 3px;
-  background-color: var(--blue);
+  background-color: var(--beige);
   border-radius: 2px;
   transition: 0.3s;
 }
@@ -177,7 +180,7 @@ header ul li a:hover {
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  background-color: var(--pink); /* Baggrundsfarve */
+  background-color: var(--blue); /* Baggrundsfarve */
 }
 
 #menuList2 {
@@ -190,12 +193,12 @@ header ul li a:hover {
   left: 0;
   width: 100vw;
   height: 100vw;
-  background-color: var(--pink);
+  background-color: var(--blue);
   z-index: 1000;
   gap: 20px;
   text-decoration: none;
   list-style: none;
-  color: var(--blue);
+  color: var(--pink);
 }
 
 /** body **/
@@ -213,8 +216,6 @@ body {
   padding-top: 1.5%;
   text-align: left;
   padding-bottom: 0;
-  /*margin-left: 1rem;
-  margin-right: 1rem;*/
 }
 
 /** forside billede menu **/
@@ -258,7 +259,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  color: var(--pink);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,8 +359,45 @@ body {
   order: -1;
 }
 
+/** animation på lottifile**/
+.ani-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ani {
+  position: absolute;
+  animation-name: falling_kf;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 1000;
+}
+
+@keyframes falling_kf {
+  0% {
+    transform: translate(-200%, -200px);
+  }
+  100% {
+    transform: translate(500%, 165%);
+  }
+}
+
+/** sektion skift **/
+.sektion_skift {
+  width: 100%;
+  height: 12vw;
+  background-color: var(--blue);
+}
+
 /** knap **/
-.grid_knap {
+.grid_knap,
+.visit_site {
   display: flex;
   justify-content: center;
   padding-bottom: 1rem;
@@ -394,6 +431,33 @@ body {
 
 .about_tekst {
   padding: 6vw;
+  padding-top: 3vw;
+}
+
+/**** besøg site knap ****/
+.visit {
+  margin-left: 32vw;
+  margin-right: 32vw;
+  margin-bottom: 6vw;
+}
+
+.visit_site {
+  font-family: "Sulphur Point", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--beige);
+  background-color: var(--yellow);
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3rem;
+}
+/***hover***/
+.visit_site:hover {
+  background-color: var(--pink);
+  color: var(--beige);
+  transition: color 1s ease-in;
 }
 
 /*******Footer******/
@@ -485,6 +549,10 @@ footer {
 
 /******  Desktop  *******/
 @media (min-width: 800px) {
+  .h3_ {
+    margin-left: 18vw;
+    margin-right: 18vw;
+  }
   /**** burger menu ****/
   .burger-menu {
     display: none;
@@ -500,12 +568,7 @@ footer {
 
   header ul li a {
     text-decoration: none;
-    color: var(--blue);
     font-size: 125%;
-  }
-
-  header ul li a:hover {
-    color: var(--yellow);
   }
 
   header .logo {
@@ -513,8 +576,7 @@ footer {
   }
 
   header ul li a.current-page {
-    color: var(--yellow); /* Samme som hover-farve */
-    border-bottom: 2px solid var(--beige); /* Tilføj evt. en understregning */
+    border-bottom: 2px solid var(--pink); /* Tilføj evt. en understregning */
   }
 
   /*****************/
@@ -529,6 +591,11 @@ footer {
 
   .high_lights {
     top: 70%;
+  }
+
+  /** about side**/
+  .about_tekst {
+    padding-bottom: 3vw;
   }
 
   /** menuerne **/
@@ -561,7 +628,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-left: 0;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     max-width: 85vw;
   }
 

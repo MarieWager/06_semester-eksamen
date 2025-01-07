@@ -20,18 +20,12 @@
 
 <body>
     <header>
-        <div class="burger-menu" id="burgerMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
         <ul id="menuList1">
-            <li class="About"><a href="About.html">About Me</a></li>
+            <li class="About"><a href="about.html">About Me</a></li>
         </ul>
 
         <a class="icon" href="index.html">
-            <img src="img/icon/blå_1.svg" alt="logo" class="base-icon">
+            <img src="img/icon/pink_1.svg" alt="logo" class="base-icon">
             <img src="img/icon/gul_1.svg" alt="hover logo" class="hover-icon"></a>
 
         <ul id="menuList2">
@@ -40,6 +34,12 @@
             <li class="Tema4"><a href="tema4.html" class="current-page">Tema 4</a></li>
             <li class="Tema5"><a href="tema5.html">Tema 5</a></li>
         </ul>
+
+        <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <main>
@@ -54,8 +54,9 @@
                 og udviklede grafikken i Adobe Illustrator.
                 <br>
                 <br>
-                I løbet af dette tema havde jeg desværre et længere sygdomsforløb, hvilket medførte at jeg ikke fik
-                fuldendt spillet til punkt og prikke.
+                I løbet af dette tema havde jeg desværre et længere sygdomsforløb under JavaScript forløbet, hvilket
+                medførte at jeg ikke fik
+                fuldendt spillet og hjemmesiden til punkt og prikke.
             </p>
         </div>
 
@@ -91,7 +92,7 @@
                         ham uimodståelig for
                         spillere.</p>
                 </div>
-                <img class="sektion_img" src="img/tema4/berry.png" alt="">
+                <img class="sektion_img" src="img/tema4/berry_1.png" alt="">
             </div>
 
             <div class="billede_v">
@@ -102,23 +103,41 @@
                         viser, hvor mange
                         funktioner jeg skulle oprette, og hvordan de var forbundet – herunder hvilke events der førte
                         fra én funktion til den
-                        næste. Jeg tilpassede diagrammet, så funktionsnavnene gav mening i mit spil.</p>
+                        næste. Jeg tilpassede diagrammet, så funktionsnavnene gav mening i mit spil.
+                    </p>
+                    <br>
+                    <h4>Spillets forløb</h4>
+                    <p>Tiden tæller ned fra 1 minut. Man har tre liv at spille med.
+                        Hvert helt bær giver 2 point, et dårligt bær koster 1 point
+                        og 1 liv, mens et halvt bær giver 1 point.
+                    </p>
                 </div>
             </div>
 
             <div class="billede_h">
                 <div class="tekst_v">
-                    <h4>x</h4>
-                    <p>xxx</p>
+                    <h4>Animation og interaktivitet</h4>
+                    <p>Jeg ville have implementeret en animation, så containerne 'faldt' ned fra toppen af skærmen,
+                        indtil man klikker på et
+                        element og ved hjælp af JavaScript ville jeg kunne gøre mine SVG’er klikbare ved at tildele
+                        id’er til både containeren
+                        og de enkelte sprites. Derefter ville jeg bruge document.querySelector til at vælge containeren
+                        og sprite-elementerne,
+                        og med metoden .classList.add kunne jeg tilføje klasser, som for eksempel for at fryse eller
+                        dreje elementet.</p>
                 </div>
-                <img class="sektion_img" src="img/tema4" alt="">
+                <img class="sektion_img" src="img/tema4/game.png" alt="">
             </div>
 
             <div class="billede_v">
-                <img class="sektion_img" src="img/marie_billeder/kaffe.jpg" alt="">
+                <img class="sektion_img" src="img/tema4/file.png" height="120" alt="">
                 <div class="tekst_h">
-                    <h4>x</h4>
-                    <p>xxx</p>
+                    <h4>Enden på eventyret</h4>
+                    <p>Når man når mindst 15 point og stadig har liv tilbage inden tiden er slut, har man hjulpet Barry
+                        hjem med en fyldt kurv
+                        og bliver vist en vinder-skærm. Hvis alle livene mistes, eller tiden løber ud, vises en
+                        taber-skærm med Barry og en tom
+                        kurv.</p>
                 </div>
             </div>
         </div>
