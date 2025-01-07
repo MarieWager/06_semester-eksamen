@@ -40,7 +40,6 @@ h3 {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1.3vw;
-  margin-bottom: 1rem;
 }
 .h3_ {
   font-family: "Chango", serif;
@@ -92,7 +91,8 @@ header ul li a:hover {
 
 /*** icon ***/
 .icon,
-.icon2 {
+.icon2,
+.instagram {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,9 +209,12 @@ body {
 }
 
 .formål {
-  padding: 6%;
+  padding: 7%;
   padding-top: 1.5%;
   text-align: left;
+  padding-bottom: 0;
+  /*margin-left: 1rem;
+  margin-right: 1rem;*/
 }
 
 /** forside billede menu **/
@@ -241,6 +244,7 @@ body {
   font-family: "Darumadrop One", serif;
   font-size: 1.5rem;
   color: var(--pink);
+  margin-bottom: 1rem;
 }
 
 .forside_menu a {
@@ -337,9 +341,9 @@ body {
   padding-top: 1rem;
 }
 
-/* i mobile skal teksterne står ovenover billederne */
+/* i mobile skal billederne står ovenover teskten */
 .tekst_h:last-child {
-  order: -1;
+  order: 1;
 }
 
 /*** sektion billeder ***/
@@ -347,7 +351,12 @@ body {
   position: relative;
   width: 100%;
   object-fit: cover;
-  border-radius: 4rem;
+  border-radius: 3.5rem;
+  border: 0;
+}
+
+.sektion_img:last-child {
+  order: -1;
 }
 
 /** knap **/
@@ -393,25 +402,47 @@ footer {
   min-height: 30vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  padding: 5vw;
 }
 
 .find_os {
-  margin-top: 12vw;
-  margin-left: 1rem;
   display: grid;
+  padding-top: 1vw;
+
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
 }
 
-.logos {
+.instagram img {
+  position: absolute;
   cursor: pointer;
+  margin-top: 12vw;
   padding-bottom: 2rem;
+  max-width: 10vw;
   gap: 1rem;
-  z-index: 1000;
+  height: auto;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
 }
-.logos a:hover {
-  filter: brightness(7);
-  transition: transform 0.3s ease;
+
+.instagram .base-icon {
+  opacity: 1;
+}
+
+.instagram .hover-icon {
+  opacity: 0;
+}
+
+.instagram:hover .base-icon {
+  opacity: 0;
+}
+
+.instagram:hover .hover-icon {
+  opacity: 1;
 }
 
 .icon2 img {
@@ -442,9 +473,14 @@ footer {
 }
 
 .footer_tekst {
+  padding-left: 2vw;
   display: flex;
-  margin-left: 1rem;
   align-items: center;
+}
+
+.p_2 {
+  color: var(--beige);
+  font-weight: bold;
 }
 
 /******  Desktop  *******/
@@ -478,7 +514,7 @@ footer {
 
   header ul li a.current-page {
     color: var(--yellow); /* Samme som hover-farve */
-    border-bottom: 2px solid var(--orange); /* Tilføj evt. en understregning */
+    border-bottom: 2px solid var(--beige); /* Tilføj evt. en understregning */
   }
 
   /*****************/
@@ -532,13 +568,16 @@ footer {
   .tekst_h,
   .tekst_v {
     padding-top: 0;
-    margin-right: 0;
+    margin-right: 1rem;
     margin-left: 1rem;
   }
 
   /** flytter teksterne til zigzag mønster**/
   .tekst_h:last-child {
-    order: 1;
+    order: 0;
+  }
+  .sektion_img:last-child {
+    order: 0;
   }
 
   /*** footer ***/

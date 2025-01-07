@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -44,20 +48,70 @@
             </h1>
             <h2>Grundlæggende Animation</h2>
             <p class="formål">I tema 4 lærte jeg at kode dynamiske websites med JavaScript og skabe et lille spil ved
-                hjælp af CSS-animationer. Jeg designede
+                hjælp af CSS-animationer. Jeg skulle designede
                 alle elementer og kodede spillet fra bunden, med fokus på UI, figurer, baggrundsdesign og komposition.
-                Jeg arbejdede med
-                aktivitets- og state-machine-diagrammer for at planlægge interaktivt flow og udviklede grafikken i Adobe
-                Illustrator.</p>
+                Jeg arbejdede med aktivitets- og state-machine-diagrammer for at planlægge interaktivt flow
+                og udviklede grafikken i Adobe Illustrator.
+                <br>
+                <br>
+                I løbet af dette tema havde jeg desværre et længere sygdomsforløb, hvilket medførte at jeg ikke fik
+                fuldendt spillet til punkt og prikke.
+            </p>
         </div>
 
         <div class="sektion_z">
+            <div class="billede_v">
+                <iframe class="sektion_img" width="530" height="320"
+                    src="https://www.youtube.com/embed/ZydZ4sLrGhM?si=adJRM2uwfIujAb3i" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <div class="tekst_h">
+                    <h4>Hjælp Barry med at fylde sin kurv!</h4>
+                    <p>I dette spil skal man hjælpe Barry, en sød og fluffy kanin, med at samle nok jordbær til at fylde
+                        sin kurv, inden solen
+                        går ned. Men pas på – de rådne jordbær er ikke til at spøge med! De koster både point og liv.
+                        De saftige hele jordbær giver flere point og fylder kurven hurtigere, mens halve jordbær også
+                        tæller – men kræver lidt
+                        mere arbejde. Målet er at samle 15 point, så Barry kan komme sikkert hjem inden mørket falder
+                        på. Så vær hurtig – hver
+                        bær tæller!</p>
+                </div>
+            </div>
+
+            <div class="billede_h">
+                <div class="tekst_v">
+                    <h4>Barry: Den Fluffy Kanin</h4>
+                    <p>Barry begyndte som en enkel skitse af en kanin, men gennem designprocessen blev
+                        han transformeret til
+                        en blød og fluffy figur, der passer perfekt ind i spillets cutesy univers. Barry er designet med
+                        pastelfarver og
+                        plys-detaljer, hvilket giver ham et legende og moderne udtryk. Kombinationen af flat-design og
+                        bouba- samt
+                        baby-bias-elementer sikrer, at Barry fremstår med bløde former og en indbydende charme, der gør
+                        ham uimodståelig for
+                        spillere.</p>
+                </div>
+                <img class="sektion_img" src="img/tema4/berry.png" alt="">
+            </div>
+
+            <div class="billede_v">
+                <img class="sektion_img" src="img/tema4/smd.png" alt="">
+                <div class="tekst_h">
+                    <h4>Planlægning af spil</h4>
+                    <p>Jeg lærte at lave state-machine-diagram – det hjælper med at planlægge kodningen af spillet. Det
+                        viser, hvor mange
+                        funktioner jeg skulle oprette, og hvordan de var forbundet – herunder hvilke events der førte
+                        fra én funktion til den
+                        næste. Jeg tilpassede diagrammet, så funktionsnavnene gav mening i mit spil.</p>
+                </div>
+            </div>
+
             <div class="billede_h">
                 <div class="tekst_v">
                     <h4>x</h4>
                     <p>xxx</p>
                 </div>
-                <img class="sektion_img" src="img/marie_billeder/kaffeb_u.jpg" alt="">
+                <img class="sektion_img" src="img/tema4" alt="">
             </div>
 
             <div class="billede_v">
@@ -68,34 +122,16 @@
                 </div>
             </div>
         </div>
-
-        <div class="sektion_z">
-            <div class="billede_h">
-                <div class="tekst_v">
-                    <h4>x</h4>
-                    <p>xxx</p>
-                </div>
-                <img class="sektion_img" src="img/marie_billeder/kaffeb_u.jpg" alt="">
-            </div>
-
-            <div class="billede_v">
-                <img class="sektion_img" src="img/marie_billeder/kaffe.jpg" alt="">
-                <div class="tekst_h">
-                    <h4>x</h4>
-                    <p>xxx</p>
-                </div>
-            </div>
-        </div>
-
-
     </main>
 
     <footer>
         <div class="find_os">
             <div class="logos">
                 <div class="menu-text">Find mig her</div>
-                <a href="https://www.instagram.com/" class="instagram"><img src="img/logos/instagram.png"
-                        alt="instagram logo"></a>
+                <a class="instagram" href="https://www.instagram.com/marie_wager/">
+                    <img src="img/icon/insta_beige.png" alt="instagram logo" class="base-icon">
+                    <img src="img/icon/insta_gul.png" alt="hover logo" class="hover-icon">
+                </a>
             </div>
         </div>
 
@@ -104,7 +140,7 @@
             <img src="img/icon/gul_1.svg" alt="hover logo" class="hover-icon"></a>
 
         <div class="footer_tekst">
-            <p>&copy; 2025. Alle rettigheder forbeholdes. <br> Designet og udviklet af Marie Wager.</p>
+            <p class="p_2">&copy; 2025. Alle rettigheder forbeholdes. <br> Designet og udviklet af Marie Wager.</p>
         </div>
     </footer>
     <script src="script.js"></script>
