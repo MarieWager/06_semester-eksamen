@@ -50,10 +50,10 @@ h3 {
   background-color: var(--orange);
   color: var(--beige);
   padding: 1rem;
-  margin-top: 4vw;
+  margin-top: 6vw;
   margin-left: 12vw;
   margin-right: 12vw;
-  margin-bottom: 8vw;
+  margin-bottom: 4vw;
   letter-spacing: 1.3vw;
 }
 h4 {
@@ -442,8 +442,24 @@ body {
 }
 
 .about_tekst {
+  display: flex;
+  flex-direction: column;
   padding: 6vw;
   padding-top: 3vw;
+  gap: 3vw;
+  align-items: center;
+}
+
+.about_tekst img {
+  position: relative;
+  object-fit: cover;
+  border-radius: 3.5rem;
+  max-width: 50%;
+}
+
+.p_3 {
+  text-align: center;
+  padding: 4vw;
 }
 
 /**** besøg site knap ****/
@@ -564,7 +580,7 @@ footer {
   .h3_ {
     margin-left: 18vw;
     margin-right: 18vw;
-    margin-bottom: 4vw;
+    margin-bottom: 0;
   }
   /**** burger menu ****/
   .burger-menu {
@@ -609,6 +625,17 @@ footer {
   /** about side**/
   .about_tekst {
     padding-bottom: 3vw;
+    flex-direction: row;
+  }
+
+  .about_tekst img {
+    position: relative;
+    object-fit: cover;
+    border-radius: 3.5rem;
+  }
+
+  .p_3 {
+    padding-top: 4vw;
   }
 
   /** menuerne **/
