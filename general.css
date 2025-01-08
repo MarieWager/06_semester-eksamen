@@ -53,7 +53,8 @@ h3 {
   margin-top: 4vw;
   margin-left: 12vw;
   margin-right: 12vw;
-  margin-bottom: 10px;
+  margin-bottom: 8vw;
+  letter-spacing: 1.3vw;
 }
 h4 {
   font-family: "Sulphur Point", serif;
@@ -563,6 +564,7 @@ footer {
   .h3_ {
     margin-left: 18vw;
     margin-right: 18vw;
+    margin-bottom: 4vw;
   }
   /**** burger menu ****/
   .burger-menu {
